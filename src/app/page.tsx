@@ -140,13 +140,13 @@ export default function PortalReciclagem() {
     );
     
     if (found) {
-      setSelectedProduct(products[found as keyof typeof products] as any);
+      setSelectedProduct(products[found as keyof typeof products]);
     } else {
       setSelectedProduct(null);
     }
   };
 
-  const handleKeyPress = (e: any) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       handleSearch();
     }
@@ -255,7 +255,7 @@ export default function PortalReciclagem() {
             {Object.entries(products).map(([key, product]) => (
               <button
                 key={key}
-                onClick={() => setSelectedProduct(product as any)}
+                onClick={() => setSelectedProduct(product)}
                 className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-100 hover:border-green-300"
               >
                 <div className="text-3xl mb-2">{product.icon}</div>
