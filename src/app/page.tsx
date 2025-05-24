@@ -196,7 +196,7 @@ export default function PortalReciclagem() {
               <input
                 type="text"
                 placeholder="Ex: vidro, plástico, óleo usado, eletrônico..."
-                className="w-full pl-12 pr-4 py-4 text-lg border-2 border-gray-200 rounded-l-xl focus:outline-none focus:border-green-500 transition-colors"
+                className="w-full pl-12 pr-4 py-4 text-lg border-2 border-gray-200 rounded-l-xl focus:outline-none focus:border-green-500 transition-colors text-gray-400"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyPress={handleKeyPress}
